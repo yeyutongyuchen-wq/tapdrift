@@ -9,7 +9,7 @@
     <meta name="description" content="Play Tap Drift online for free at tapdrift.io. Master the art of drifting in this addictive one-tap racing game. No download required.">
     <meta name="keywords" content="tap drift, drift game, one tap drift, online racing game, hypercasual game, tapdrift.io">
     <meta name="robots" content="index, follow">
-    
+     <meta name="google-adsense-account" content="ca-pub-8167091872749916">
     <link rel="canonical" href="https://tapdrift.io/" />
 
     <meta property="og:title" content="Tap Drift - Master the Drift">
@@ -20,7 +20,15 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚗</text></svg>">
 
     <script src="https://cdn.tailwindcss.com"></script>
-    
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ELR0HKV4NP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ELR0HKV4NP');
+</script>
     <link rel="preconnect" href="https://gs.jurieo.com/gemini/fonts-googleapis">
     <link rel="preconnect" href="https://gs.jurieo.com/gemini/fonts-gstatic" crossorigin>
     <link href="https://gs.jurieo.com/gemini/fonts-googleapis/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -93,14 +101,7 @@
                     <span class="text-apple-subtext animate-pulse">Loading Game Engine...</span>
                 </div>
                 
-                <iframe 
-                    src="https://tapdrift.vercel.app/" 
-                    title="Tap Drift Game Window"
-                    class="relative z-10 w-full h-full border-none"
-                    allowfullscreen="true"
-                    loading="eager"
-                    scrolling="no">
-                </iframe>
+                <iframe src="https://tapdrift.github.io/" width="100%" height="600" frameborder="0" allowfullscreen></iframe>
             </div>
 
             <div class="mt-6 flex items-center gap-2 text-sm text-apple-subtext bg-white px-4 py-2 rounded-full shadow-sm border border-gray-100">
@@ -186,6 +187,7 @@
                 <a href="#" class="hover:text-apple-dark transition-colors">Privacy Policy</a>
                 <a href="#" class="hover:text-apple-dark transition-colors">Terms of Service</a>
                 <span>© 2024 TapDrift.io</span>
+
             </div>
         </div>
     </footer>
