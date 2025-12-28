@@ -9,7 +9,12 @@
     <meta name="google-adsense-account" content="ca-pub-8167091872749916">    
     <link rel="canonical" href="https://tapdrift.io/">
     <title>Tap Drift | Best Free Drift Game - One Tap Challenge</title>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ELR0HKV4NP"></script>
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚗</text></svg>">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ELR0HKV4NP"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -17,133 +22,168 @@
 
   gtag('config', 'G-ELR0HKV4NP');
 </script>
- <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://gs.jurieo.com/gemini/fonts-googleapis">
+    <link rel="preconnect" href="https://gs.jurieo.com/gemini/fonts-gstatic" crossorigin>
+    <link href="https://gs.jurieo.com/gemini/fonts-googleapis/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <script>
         tailwind.config = {
             theme: {
                 extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
                     colors: {
                         apple: {
-                            blue: '#007AFF',
-                            gray: '#F2F2F7',
-                            darkgray: '#1C1C1E',
-                            lightgray: '#E5E5EA',
+                            bg: '#F5F5F7',      // Apple's light gray background
+                            text: '#1D1D1F',    // Apple's primary text
+                            subtext: '#86868B', // Apple's secondary text
+                            blue: '#0071E3',    // Apple's interactive blue
+                            dark: '#000000',
                         }
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 30px -10px rgba(0, 0, 0, 0.08)',
+                        'glass': '0 4px 30px rgba(0, 0, 0, 0.1)',
                     }
                 }
             }
         }
     </script>
+
     <style>
-        body { background-color: #FAFAFA; }
-        .game-container {
-            position: relative;
-            width: 100%;
-            max-width: 900px;
-            margin: 0 auto;
-            background: #000;
-            border-radius: 1.5rem;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-            aspect-ratio: 16 / 9;
-        }
-        @media (max-width: 768px) {
-            .game-container { aspect-ratio: 9 / 16; border-radius: 1rem; }
-        }
-        .game-frame { width: 100%; height: 100%; border: 0; }
+        /* Smooth scrolling for the whole page */
+        html { scroll-behavior: smooth; }
+        /* Hide scrollbar for the iframe container to look cleaner */
+        .game-container::-webkit-scrollbar { display: none; }
     </style>
 </head>
-<body class="min-h-screen flex flex-col bg-gray-100 dark:bg-black text-gray-900 dark:text-gray-100">
-    <header class="bg-white dark:bg-darkgray py-8 shadow-md">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <h1 class="text-4xl md:text-5xl font-bold text-apple-blue mb-2">Tap Drift</h1>
-            <p class="text-xl text-gray-600 dark:text-gray-400">Best Free Drift Game - One Tap Challenge</p>
+<body class="bg-apple-bg text-apple-text font-sans antialiased selection:bg-apple-blue selection:text-white">
+
+    <header class="fixed w-full top-0 z-50 bg-white/70 backdrop-blur-md border-b border-gray-200 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-2 group">
+                <span class="text-xl font-semibold tracking-tight group-hover:opacity-80 transition-opacity">
+                    TapDrift<span class="text-apple-subtext">.io</span>
+                </span>
+            </a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#play" class="text-sm font-medium text-apple-text hover:text-apple-blue transition-colors">Play Now</a>
+                <a href="#about" class="text-sm font-medium text-apple-subtext hover:text-apple-text transition-colors">How to Play</a>
+                <a href="#features" class="text-sm font-medium text-apple-subtext hover:text-apple-text transition-colors">Features</a>
+            </nav>
+            <a href="#play" class="md:hidden text-apple-blue font-medium text-sm">Play</a>
         </div>
     </header>
 
-    <main class="flex-1 max-w-4xl mx-auto px-4 py-8 w-full">
-        <!-- Game Embed -->
-        <section class="mb-12">
-            <div class="game-container">
-                 <iframe src="https://tapdrift.github.io/" width="100%" height="600" frameborder="0" allowfullscreen title="Tap Drift - One Tap Drift Game"></iframe>
+    <main class="pt-20 pb-12">
+        
+        <section id="play" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+            
+            <div class="text-center mb-8 mt-4 animate-fade-in-up">
+                <h1 class="text-4xl md:text-6xl font-bold tracking-tight text-apple-dark mb-3">
+                    Tap Drift
+                </h1>
+                <p class="text-lg md:text-xl text-apple-subtext font-light max-w-2xl mx-auto leading-relaxed">
+                    The minimalist drifting experience. One tap to turn, release to straighten. How far can you go?
+                </p>
             </div>
-            <div class="text-center mt-6">
-                <p class="text-gray-600 dark:text-gray-400 text-lg">Tap/Click and hold in yellow zones to drift • Release perfectly to chain combos • Master timing!</p>
-            </div>
-        </section>
 
-        <!-- Game Description -->
-        <section class="mb-12 prose prose-lg dark:prose-invert max-w-none">
-            <h2 class="text-3xl font-bold text-apple-blue mb-6">Master the Ultimate One-Tap Drift Challenge</h2>
-            <p>Tap Drift is the ultimate one-tap drift game that tests your reflexes and timing like no other. Your car accelerates automatically down an endless twisting road filled with sharp corners marked by yellow drift zones. Simply tap or click and hold as you enter a zone to execute a perfect sideways slide — then release exactly when the zone ends to straighten up and keep your combo going.</p>
-            <p>One tiny mistake in timing — too early or too late — and you'll crash in a fireball, ending your run. But nail those perfect drifts in a row, and you'll build massive score multipliers, rack up EXP, level up, unlock sleek new cars, and open loot boxes packed with upgrades and customizations.</p>
-            <p>As you progress, the speed ramps up relentlessly, making every corner a high-stakes test of precision. It's the perfect blend of simple controls and addictive depth that keeps you coming back for "just one more run."</p>
-        </section>
-
-        <!-- How to Play -->
-        <section class="mb-12">
-            <h2 class="text-3xl font-bold text-apple-blue mb-6">How to Play Tap Drift</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-apple-gray dark:bg-gray-900 rounded-xl p-8 shadow-md">
-                    <h3 class="text-2xl font-semibold mb-4 text-apple-blue">Desktop Controls</h3>
-                    <ul class="list-disc list-inside space-y-3 text-lg">
-                        <li>Click and hold left mouse button when entering yellow zones to start drifting.</li>
-                        <li>Release the button precisely when the yellow zone ends.</li>
-                        <li>Chain perfect drifts for huge combo multipliers and EXP gains.</li>
-                    </ul>
+            <div class="w-full max-w-5xl bg-white rounded-3xl shadow-soft overflow-hidden border border-gray-200 relative aspect-[16/9] md:aspect-[21/9] lg:aspect-[16/9] lg:h-[70vh]">
+                <div class="absolute inset-0 flex items-center justify-center bg-gray-50 z-0">
+                    <span class="text-apple-subtext animate-pulse">Loading Game Engine...</span>
                 </div>
-                <div class="bg-apple-gray dark:bg-gray-900 rounded-xl p-8 shadow-md">
-                    <h3 class="text-2xl font-semibold mb-4 text-apple-blue">Mobile Controls</h3>
-                    <ul class="list-disc list-inside space-y-3 text-lg">
-                        <li>Tap and hold the screen to drift through corners.</li>
-                        <li>Release your finger at the exact end of the yellow zone.</li>
-                        <li>Fully optimized for portrait and landscape play.</li>
-                    </ul>
-                </div>
+                
+                <iframe src="https://zapgames.io/tap-drift/" width="100%" height="600" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <div class="mt-6 flex items-center gap-2 text-sm text-apple-subtext bg-white px-4 py-2 rounded-full shadow-sm border border-gray-100">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"></path></svg>
+                <span>Desktop: Click & Hold</span>
+                <span class="mx-2 text-gray-300">|</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                <span>Mobile: Tap Screen</span>
             </div>
         </section>
 
-        <!-- Why Play -->
-        <section class="mb-12">
-            <h2 class="text-3xl font-bold text-apple-blue mb-6">Why Tap Drift is the Best Free Drift Game</h2>
-            <ul class="grid md:grid-cols-3 gap-6">
-                <li class="bg-apple-gray dark:bg-gray-900 rounded-xl p-6 shadow-md">
-                    <h3 class="text-xl font-semibold mb-2">One-Tap Simplicity</h3>
-                    <p class="text-gray-600 dark:text-gray-400">Easy to learn, impossibly hard to master — pure skill-based fun.</p>
-                </li>
-                <li class="bg-apple-gray dark:bg-gray-900 rounded-xl p-6 shadow-md">
-                    <h3 class="text-xl font-semibold mb-2">Endless Progression</h3>
-                    <p class="text-gray-600 dark:text-gray-400">Unlock cars, upgrades, skins, and dominate the leaderboard.</p>
-                </li>
-                <li class="bg-apple-gray dark:bg-gray-900 rounded-xl p-6 shadow-md">
-                    <h3 class="text-xl font-semibold mb-2">Unblocked Anywhere</h3>
-                    <p class="text-gray-600 dark:text-gray-400">Play instantly at school, work, or home — no downloads needed.</p>
-                </li>
-                <li class="bg-apple-gray dark:bg-gray-900 rounded-xl p-6 shadow-md">
-                    <h3 class="text-xl font-semibold mb-2">Increasing Challenge</h3>
-                    <p class="text-gray-600 dark:text-gray-400">Speed builds over time for heart-pounding intensity.</p>
-                </li>
-                <li class="bg-apple-gray dark:bg-gray-900 rounded-xl p-6 shadow-md">
-                    <h3 class="text-xl font-semibold mb-2">Perfect Responsiveness</h3>
-                    <p class="text-gray-600 dark:text-gray-400">Seamless on PC, tablet, and phone with adaptive design.</p>
-                </li>
-                <li class="bg-apple-gray dark:bg-gray-900 rounded-xl p-6 shadow-md">
-                    <h3 class="text-xl font-semibold mb-2">Addictive High Scores</h3>
-                    <p class="text-gray-600 dark:text-gray-400">Beat your personal best and chase global rankings.</p>
-                </li>
-            </ul>
-        </section>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-24 space-y-24">
+            
+            <section id="about" class="text-center md:text-left md:grid md:grid-cols-12 md:gap-12 items-center">
+                <div class="md:col-span-12">
+                    <h2 class="text-3xl font-semibold text-apple-dark mb-4 tracking-tight">Simple to learn. Impossible to master.</h2>
+                    <div class="prose prose-lg text-apple-subtext leading-relaxed">
+                        <p>
+                            <strong>Tap Drift</strong> brings the thrill of arcade racing back to its purest form. Stripping away complex controls and gear shifts, the game focuses on a single, crucial mechanic: timing.
+                        </p>
+                        <p class="mt-4">
+                            The car accelerates automatically. Your job is to guide it through treacherous, randomly generated tracks. It's a test of reflexes and rhythm designed for quick sessions and endless replayability.
+                        </p>
+                    </div>
+                </div>
+            </section>
 
-        <section class="text-center py-10">
-            <p class="text-2xl font-semibold text-apple-blue">Start Drifting Now — Play Tap Drift for Free!</p>
-        </section>
+            <section id="features">
+                <h2 class="text-3xl font-semibold text-center text-apple-dark mb-12 tracking-tight">Why play on TapDrift.io?</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-apple-blue mb-6">
+                            ⚡
+                        </div>
+                        <h3 class="text-xl font-medium text-apple-dark mb-2">Instant Play</h3>
+                        <p class="text-apple-subtext">No downloads, no installations, no lag. Tap Drift is built on lightweight web technologies for instant loading.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 bg-purple-50 rounded-xl flex items-center justify-center text-purple-600 mb-6">
+                            ∞
+                        </div>
+                        <h3 class="text-xl font-medium text-apple-dark mb-2">Endless Tracks</h3>
+                        <p class="text-apple-subtext">The road never ends. The procedural generation ensures that no two runs are ever the same.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 bg-green-50 rounded-xl flex items-center justify-center text-green-600 mb-6">
+                            📱
+                        </div>
+                        <h3 class="text-xl font-medium text-apple-dark mb-2">Cross-Platform</h3>
+                        <p class="text-apple-subtext">Whether you are on an iPhone, Android, or PC, the responsive design adapts to your screen perfectly.</p>
+                    </div>
+                </div>
+            </section>
+
+             <section class="bg-white rounded-3xl p-8 md:p-12 shadow-soft">
+                <h2 class="text-2xl font-semibold text-apple-dark mb-6">Pro Tips for High Scores</h2>
+                <ul class="space-y-4 text-apple-subtext">
+                    <li class="flex items-start">
+                        <span class="mr-3 text-apple-blue font-bold">1.</span>
+                        <span><strong>Don't over-steer:</strong> Short, controlled taps are often better than long holds. The car turns sharper than you think.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="mr-3 text-apple-blue font-bold">2.</span>
+                        <span><strong>Anticipate the curve:</strong> Look ahead of the car, not at the car. Start your drift slightly before the corner begins.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="mr-3 text-apple-blue font-bold">3.</span>
+                        <span><strong>Find your rhythm:</strong> The generated tracks often follow a pattern. Once you find the rhythm of the zig-zags, you'll flow through them.</span>
+                    </li>
+                </ul>
+            </section>
+
+        </div>
     </main>
 
-    <footer class="bg-white dark:bg-darkgray py-6 mt-auto border-t">
-        <div class="max-w-4xl mx-auto px-4 text-center text-sm text-gray-500 dark:text-gray-400">
-            © 2025 TapDrift.io • Best Free Online Drift Games • Tap Drift Unblocked
+    <footer class="bg-white border-t border-gray-200 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+                <span class="text-lg font-semibold tracking-tight">TapDrift.io</span>
+                <p class="text-sm text-apple-subtext mt-1">The minimalist racing challenge.</p>
+            </div>
+            <div class="flex space-x-6 text-sm text-apple-subtext">
+                <a href="#" class="hover:text-apple-dark transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-apple-dark transition-colors">Terms of Service</a>
+                <span>© 2024 TapDrift.io</span>
+
+            </div>
         </div>
     </footer>
-</body>
 
+</body>
 </html>
