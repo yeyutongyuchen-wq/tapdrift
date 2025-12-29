@@ -60,6 +60,13 @@
             top: 0; left: 0;
             width: 100%; height: 100%;
             border: none;
+            /* 裁剪只显示纯游戏区域（隐藏头部广告 ~140px 和底部 ~100px） */
+            clip-path: inset(140px 0 100px 0);
+        }
+        @media (max-width: 768px) {
+            iframe {
+                clip-path: inset(120px 0 150px 0); /* 移动端调整，头部稍少底部稍多 */
+            }
         }
     </style>
 </head>
@@ -73,7 +80,7 @@
         </div>
     </header>
 
-    <!-- Game Iframe (只嵌入 azgames.io/tap-drift 的游戏部分) -->
+    <!-- Game Iframe - 只显示 azgames.io/tap-drift 的纯游戏区域 -->
     <main class="flex-1 max-w-5xl mx-auto px-4 w-full">
         <div class="game-container">
             <iframe src="https://azgames.io/tap-drift"
