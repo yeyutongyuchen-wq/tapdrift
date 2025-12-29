@@ -3,18 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Play Tap Drift online for free. One-tap drift game with smooth controls and addictive gameplay. No download required – fully unblocked and instantly playable.">
+    
+    <title>Tap Drift - Play One Tap Drift Games Online Unblocked</title>
+    <meta name="description" content="Master the art of the drift game with Tap Drift. Experience the ultimate one tap drift challenge. Play Tap Drift unblocked for free on any device. High-speed racing made simple.">
     <meta name="keywords" content="drift games, tap drift, drift game, one tap drift, tap drift unblocked">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://tapdrift.io/">
-    <title>Tap Drift | Free Online One-Tap Drift Game</title>
-    <meta property="og:title" content="Tap Drift – Addictive One-Tap Drift Game">
-    <meta property="og:description" content="Master perfect drifts with just one tap. Play Tap Drift instantly in your browser – free, unblocked, and endlessly fun.">
-    <meta property="og:url" content="https://tapdrift.io/">
-    <meta property="og:type" content="website">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚗</text></svg>">
+    <meta name="author" content="TapDrift.io">
+    
+    <link rel="canonical" href="https://tapdrift.io/" />
 
-    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ELR0HKV4NP"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -24,111 +20,181 @@
     </script>
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        apple: {
-                            gray: '#f5f5f7',
-                            blue: '#0071e3',
-                            dark: '#1d1d1f',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+    
+    <link href="https://gs.jurieo.com/gemini/fonts-googleapis/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <style>
-        body { background: linear-gradient(to bottom, #f5f5f7, #ffffff); }
+        :root {
+            --apple-bg: #F5F5F7;
+            --apple-text: #1D1D1F;
+            --apple-blue: #0071E3;
+        }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--apple-bg);
+            color: var(--apple-text);
+            scroll-behavior: smooth;
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: saturate(180%) blur(20px);
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+        }
         .game-container {
-            position: relative;
-            width: 100%;
-            max-width: 900px;
-            margin: 2rem auto;
-            background: #000;
-            border-radius: 1.5rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border-radius: 24px;
             overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-            aspect-ratio: 16 / 9;
+            background: #000;
         }
-        @media (max-width: 768px) {
-            .game-container { aspect-ratio: 9 / 16; margin: 1rem auto; }
+        .video-aspect {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
         }
-        iframe {
+        .video-aspect iframe {
             position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            border: none;
-            /* 裁剪只显示纯游戏区域（隐藏头部广告 ~140px 和底部 ~100px） */
-            clip-path: inset(140px 0 100px 0);
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
-        @media (max-width: 768px) {
-            iframe {
-                clip-path: inset(120px 0 150px 0); /* 移动端调整，头部稍少底部稍多 */
-            }
+        .apple-card {
+            background: #FFFFFF;
+            border-radius: 20px;
+            transition: transform 0.3s ease;
+        }
+        .apple-card:hover {
+            transform: translateY(-5px);
         }
     </style>
 </head>
-<body class="min-h-screen flex flex-col">
+<body class="antialiased">
 
-    <!-- Header -->
-    <header class="bg-white shadow-sm">
-        <div class="max-w-5xl mx-auto px-4 py-8 text-center">
-            <h1 class="text-4xl md:text-6xl font-bold text-apple-dark">Tap Drift</h1>
-            <p class="mt-4 text-xl md:text-2xl text-gray-600">Master perfect drifts with just one tap – simple, fast, and endlessly addictive</p>
+    <nav class="fixed top-0 w-full z-50 glass-nav border-b border-gray-200">
+        <div class="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
+            <a href="/" class="text-xl font-semibold tracking-tight">Tap Drift</a>
+            <div class="hidden md:flex space-x-6 text-sm font-medium">
+                <a href="#play" class="hover:text-blue-600">Play Now</a>
+                <a href="#features" class="hover:text-blue-600">Features</a>
+                <a href="#guide" class="hover:text-blue-600">Guide</a>
+                <a href="#faq" class="hover:text-blue-600">FAQ</a>
+            </div>
         </div>
-    </header>
+    </nav>
 
-    <!-- Game Iframe - 只显示 azgames.io/tap-drift 的纯游戏区域 -->
-    <main class="flex-1 max-w-5xl mx-auto px-4 w-full">
-        <div class="game-container">
-            <iframe src="https://azgames.io/tap-drift"
-                    allowfullscreen
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"
-                    title="Tap Drift - Free Online Drift Game">
-            </iframe>
+    <main class="pt-24 pb-12">
+        <div class="max-w-4xl mx-auto px-6 text-center mb-12">
+            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter mb-6 bg-clip-text text-transparent bg-gradient-to-b from-gray-900 to-gray-600">
+                Tap Drift
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-500 font-light mb-8">
+                The most precise <strong>one tap drift</strong> experience on the web. Click to turn, release to slide, and master the track.
+            </p>
         </div>
 
-        <!-- Game Description -->
-        <section class="mt-12 bg-white rounded-2xl shadow-lg p-8 md:p-12">
-            <h2 class="text-3xl md:text-4xl font-bold text-apple-dark mb-6">About Tap Drift</h2>
-            <p class="text-lg text-gray-700 leading-relaxed mb-6">
-                Tap Drift is an exciting one-tap drift game that challenges your timing and precision on every corner. With minimalist yet captivating gameplay, you control a speeding car through endless twisting tracks – a perfectly timed single tap initiates a smooth drift, building combo multipliers and boosting your score higher with every successful slide.
+        <section id="play" class="max-w-5xl mx-auto px-4 mb-20">
+            <div class="game-container">
+                <div class="video-aspect">
+                    <iframe 
+                        src="https://tapdrift.vercel.app/" 
+                        title="Tap Drift Unblocked Game"
+                        frameborder="0" 
+                        allow="autoplay; fullscreen; keyboard-events" 
+                        scrolling="no">
+                    </iframe>
+                </div>
+            </div>
+            <div class="mt-6 text-center">
+                <span class="inline-flex items-center px-4 py-1 rounded-full bg-gray-200 text-xs font-medium text-gray-700">
+                    <span class="w-2 h-2 bg-green-500 rounded-full mr-2"></span> Active: Play Tap Drift Online
+                </span>
+            </div>
+        </section>
+
+        <article class="max-w-4xl mx-auto px-6 leading-relaxed">
+            
+            <h2 id="guide" class="text-3xl font-bold mb-6 text-gray-900">Revolutionizing the Drift Game Genre</h2>
+            <p class="mb-4 text-gray-600">
+                In the expansive world of <strong>drift games</strong>, players often find themselves overwhelmed by complex simulations and steep learning curves. <strong>Tap Drift</strong> changes that narrative by offering a refined, physics-based racing experience that anyone can pick up in seconds but takes months to master. As a premier <strong>drift game</strong>, it focuses on the essential thrill of the perfect corner.
             </p>
-            <p class="text-lg text-gray-700 leading-relaxed mb-6">
-                The beauty of Tap Drift lies in its elegant simplicity. There are no complicated controls or lengthy tutorials – just pure, focused drifting action. Each run generates a new procedural track layout, ensuring no two sessions feel the same. Chain together long drifts to achieve massive scores and experience the satisfying rush of near-perfect cornering.
-            </p>
-            <p class="text-lg text-gray-700 leading-relaxed mb-6">
-                Designed for quick play sessions or extended high-score hunts, Tap Drift is completely free and runs directly in your browser with no downloads required. It's fully unblocked, making it ideal for enjoying during breaks at school or work. The responsive touch and mouse controls work flawlessly on both desktop computers and mobile devices.
-            </p>
-            <p class="text-lg text-gray-700 leading-relaxed mb-8">
-                Whether you're a casual player looking for instant fun or a competitive gamer chasing leaderboard glory, Tap Drift delivers addictive drift game experience in its purest form. The clean visuals, smooth physics, and rewarding progression system keep players coming back again and again.
+            <p class="mb-8 text-gray-600">
+                The core philosophy behind our development was to create a <strong>one tap drift</strong> mechanic that felt organic. Whether you are playing on a high-end PC or a mobile device, the responsiveness of the vehicle is paramount. Every tap calculates the centripetal force and friction of your tires, making every drift unique.
             </p>
 
-            <h2 class="text-3xl md:text-4xl font-bold text-apple-dark mb-6">Why Players Love Tap Drift</h2>
-            <ul class="list-disc list-inside text-lg text-gray-700 space-y-4 mb-8">
-                <li>Ultra-simple one-tap mechanics – anyone can pick up and play instantly</li>
-                <li>Satisfying drift physics with realistic slide feel and visual feedback</li>
-                <li>Endless procedurally generated tracks for unlimited replayability</li>
-                <li>No installation needed – play directly in any modern browser</li>
-                <li>Completely unblocked – perfect for school, work, or anywhere</li>
-                <li>Beautiful minimalist design inspired by clean Apple aesthetics</li>
-                <li>Seamless performance on both desktop and mobile devices</li>
-                <li>Progressive difficulty that naturally builds skill and mastery</li>
+            <div class="grid md:grid-cols-2 gap-8 mb-16">
+                <div class="apple-card p-8 shadow-sm border border-gray-100">
+                    <h3 class="text-xl font-bold mb-4">Why Play Tap Drift Unblocked?</h3>
+                    <p class="text-gray-500 text-sm">
+                        Accessibility is key to fun. We provide <strong>tap drift unblocked</strong> versions so you can enjoy a quick session during your break, at school, or in the office. No downloads, no installations—just pure drifting action directly in your browser.
+                    </p>
+                </div>
+                <div class="apple-card p-8 shadow-sm border border-gray-100">
+                    <h3 class="text-xl font-bold mb-4">Mastering One Tap Drift</h3>
+                    <p class="text-gray-500 text-sm">
+                        Success in <strong>one tap drift</strong> requires more than just speed; it requires rhythm. Learning the exact millisecond to hold the tap and when to let go determines your exit speed. High scorers know that the drift is a dance between the car and the road.
+                    </p>
+                </div>
+            </div>
+
+            <h2 id="features" class="text-3xl font-bold mb-6 text-gray-900">Key Features of Tap Drift</h2>
+            <ul class="space-y-4 mb-12">
+                <li class="flex items-start">
+                    <span class="text-blue-500 mr-3 mt-1">●</span>
+                    <span><strong>Seamless Performance:</strong> Optimized for HTML5 browsers to ensure zero lag, which is critical for <strong>drift games</strong> where timing is everything.</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-blue-500 mr-3 mt-1">●</span>
+                    <span><strong>Endless Variety:</strong> The tracks in <strong>tap drift</strong> dynamically scale in difficulty, keeping your adrenaline pumping as you progress.</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-blue-500 mr-3 mt-1">●</span>
+                    <span><strong>Minimalist Aesthetic:</strong> Designed with a clean, modern interface that lets you focus on the gameplay without unnecessary distractions.</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-blue-500 mr-3 mt-1">●</span>
+                    <span><strong>Cross-Platform Play:</strong> Start your <strong>drift game</strong> on your desktop and finish it on your phone with the same smooth physics.</span>
+                </li>
             </ul>
 
-            <p class="text-lg text-gray-700 leading-relaxed">
-                Ready to test your drifting skills? Jump in now and see how long you can maintain the ultimate drift chain. Tap Drift stands out among drift games for its perfect balance of accessibility and depth – once you start, it's hard to put down. Enjoy one of the best free online drift games available today!
+            <h2 class="text-3xl font-bold mb-6 text-gray-900">The Ultimate Drift Game Community</h2>
+            <p class="mb-6 text-gray-600">
+                What sets <strong>Tap Drift</strong> apart from other <strong>drift games</strong> is its competitive nature. Since its release, the community of <strong>one tap drift</strong> enthusiasts has grown significantly. Players share strategies on how to navigate the tightest corners and achieve the longest drifts without hitting the walls.
             </p>
-        </section>
+            <p class="mb-12 text-gray-600">
+                Furthermore, the demand for <strong>tap drift unblocked</strong> has led us to ensure that our hosting remains stable and accessible worldwide. We believe that everyone should have access to high-quality entertainment regardless of their location or device limitations.
+            </p>
+
+            <section id="faq" class="bg-gray-100 rounded-3xl p-10 mb-12">
+                <h2 class="text-2xl font-bold mb-8">Frequently Asked Questions</h2>
+                <div class="space-y-8">
+                    <div>
+                        <h4 class="font-semibold text-lg mb-2">Is Tap Drift free?</h4>
+                        <p class="text-gray-500">Yes, the <strong>drift game</strong> is completely free to play. We aim to keep <strong>tap drift</strong> accessible to all fans of racing games.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-lg mb-2">Where can I play Tap Drift unblocked?</h4>
+                        <p class="text-gray-500">You are in the right place! Tapdrift.io is the official home for <strong>tap drift unblocked</strong>, ensuring you can play anywhere, anytime.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-lg mb-2">What makes this different from other drift games?</h4>
+                        <p class="text-gray-500">Most <strong>drift games</strong> are too complicated. <strong>One tap drift</strong> boils the experience down to timing and skill, making it more addictive and rewarding.</p>
+                    </div>
+                </div>
+            </section>
+        </article>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-apple-dark text-white py-8 mt-12">
-        <div class="max-w-5xl mx-auto px-4 text-center">
-            <p class="text-sm">&copy; 2025 TapDrift.io – Play Free Online Drift Games</p>
-            <p class="text-sm mt-2">Keywords: drift games, tap drift, drift game, one tap drift, tap drift unblocked</p>
+    <footer class="bg-white border-t border-gray-200 py-12">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+                <span class="text-xl font-bold tracking-tight">TapDrift.io</span>
+                <p class="text-xs text-gray-400 mt-1">© 2024 All Rights Reserved. Play the best <strong>drift games</strong> online.</p>
+            </div>
+            <div class="flex space-x-6 text-sm text-gray-500">
+                <a href="#" class="hover:text-black">Privacy Policy</a>
+                <a href="#" class="hover:text-black">Terms of Service</a>
+                <a href="mailto:contact@tapdrift.io" class="hover:text-black">Contact</a>
+            </div>
         </div>
     </footer>
 
