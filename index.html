@@ -1,88 +1,172 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tap Drift - Play Online for Free! 🚗💨</title>
-    <meta name="description" content="Play Tap Drift online for free! Master one-tap drifting: time perfect slides around corners, chain combos, upgrade your cars. No download, instant HTML5 racing fun!">
-    <meta name="keywords" content="tap drift, tapdrift, play tap drift, drift game, one tap drift, html5 drift game, free car drifting games">
-    <!-- Google Adsense - Replace with your own ca-pub-XXXXX -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXX" crossorigin="anonymous"></script>
-    <style>
-        body { margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif; background: linear-gradient(135deg, #ff6b6b, #4ecdc4); text-align: center; color: white; }
-        header { background: rgba(0,0,0,0.75); padding: 25px; }
-        #game-container { max-width: 1200px; margin: 25px auto; position: relative; background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.5); }
-        iframe { width: 100%; height: 700px; border: none; display: block; }
-        .fullscreen-btn { background: #ff4757; color: white; border: none; padding: 16px 45px; font-size: 20px; border-radius: 50px; cursor: pointer; margin: 25px; transition: all 0.3s; box-shadow: 0 5px 15px rgba(0,0,0,0.4); }
-        .fullscreen-btn:hover { background: #ff3838; transform: scale(1.08); }
-        .ads { margin: 25px auto; max-width: 728px; }
-        .how-to-play { max-width: 900px; margin: 25px auto; padding: 25px; background: rgba(255,255,255,0.15); border-radius: 15px; }
-        footer { background: rgba(0,0,0,0.75); padding: 25px; margin-top: 40px; }
-        @media (max-width: 768px) { iframe { height: 550px; } .fullscreen-btn { padding: 14px 35px; font-size: 18px; } }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>🚗 Tap Drift</h1>
-        <p>Master the art of one-tap drifting! Time your slides perfectly, build insane combos, and unlock faster cars!</p>
-        <!-- Header Ad -->
-        <div class="ads">
-            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXX" data-ad-slot="XXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
-            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-        </div>
-    </header>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Play Tap Drift - the addictive one-tap drifting game! Master quick taps to drift through challenging tracks. Free, unblocked & instant play."/>
+  <meta name="keywords" content="drift games, tap drift, drift game, one tap drift, tap drift unblocked"/>
+  
+  <!-- Canonical -->
+  <link rel="canonical" href="https://tapdrift.io/"/>
+  
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Tap Drift - One Tap Drifting Action"/>
+  <meta property="og:description" content="Simple yet addictive one-tap drift game. Tap to drift, avoid crashing and go as far as you can!"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://tapdrift.io/"/>
+  <meta property="og:image" content="https://tapdrift.io/og-image.jpg"/> <!-- 请后续自行替换为真实图片 -->
 
-    <div id="game-container">
-        <!-- Core Embed: Azgames (most reliable) -->
-        <iframe 
-            src="https://azgames.io/tap-drift" 
-            allowfullscreen 
-            sandbox="allow-scripts allow-same-origin allow-presentation allow-downloads allow-popups allow-forms"
-            loading="lazy"
-            title="Tap Drift - One-Tap Drifting Game">
-        </iframe>
-        <!-- Backup src options (swap if needed): 
-             https://taproad.io/tap-drift
-             https://1games.io/tap-drift -->
-        <button class="fullscreen-btn" onclick="goFullscreen()">🔥 Play Fullscreen</button>
-    </div>
+  <title>Tap Drift - Addictive One Tap Drifting Game | Play Free Now</title>
 
-    <div class="ads">
-        <!-- Bottom Ad -->
-        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXX" data-ad-slot="XXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-    </div>
-
-    <section class="how-to-play">
-        <h2>🎮 How to Play</h2>
-        <p><strong>Super simple controls:</strong> Your car drives automatically! <strong>Tap / Hold</strong> when entering the yellow corner zones to drift. Release to go straight. Perfect timing = combo + EXP!<br>
-        Drift too early or too late = crash & restart. The speed keeps increasing — survive as long as you can!</p>
-    </section>
-
-    <footer>
-        <p>More hot games: <a href="/" style="color: #4ecdc4;">Merge Infinity</a> | <a href="/orbit-kick" style="color: #4ecdc4;">Orbit Kick</a> | <a href="/bat-smash" style="color: #4ecdc4;">Bat Smash</a> | Free HTML5 Games</p>
-        <p>© 2025 TapDrift.io | Powered by Azgames.io</p>
-    </footer>
-
-    <script>
-        function goFullscreen() {
-            const iframe = document.querySelector('iframe');
-            if (iframe.requestFullscreen) {
-                iframe.requestFullscreen();
-            } else if (iframe.webkitRequestFullscreen) {
-                iframe.webkitRequestFullscreen();
-            } else if (iframe.msRequestFullscreen) {
-                iframe.msRequestFullscreen();
-            }
+  <!-- Apple-like color system + Tailwind via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'apple-gray': '#f5f5f7',
+            'apple-dark': '#1d1d1f',
+            'apple-blue': '#0071e3',
+            'apple-blue-dark': '#0066cc',
+          }
         }
+      }
+    }
+  </script>
 
-        // Auto-push ads + hide fullscreen button after 5 seconds
-        window.addEventListener('load', () => {
-            (adsbygoogle = window.adsbygoogle || []).push({});
-            setTimeout(() => {
-                document.querySelector('.fullscreen-btn').style.display = 'none';
-            }, 5000);
-        });
-    </script>
+  <!-- Favicon (建议你后续替换) -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+
+  <!-- Google Analytics -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ELR0HKV4NP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ELR0HKV4NP');
+  </script>
+</head>
+<body class="bg-apple-gray text-apple-dark min-h-screen font-sans antialiased">
+
+  <!-- Header / Hero -->
+  <header class="bg-gradient-to-b from-white to-apple-gray pt-8 pb-12 md:pt-16 md:pb-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4 text-apple-dark">
+        Tap Drift
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto">
+        One tap. Pure drifting adrenaline. How far can you go with perfect timing?
+      </p>
+
+      <div class="flex flex-col sm:flex-row justify-center gap-5 mt-6">
+        <a href="#game" 
+           class="inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-white bg-apple-blue rounded-full hover:bg-apple-blue-dark transition-colors shadow-lg">
+          Play Tap Drift Now →
+        </a>
+        <a href="#about" 
+           class="inline-flex items-center justify-center px-8 py-4 text-lg font-medium border-2 border-gray-300 rounded-full hover:bg-white/80 transition-colors">
+          Learn More
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Game Container -->
+  <main id="game" class="py-10 md:py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="aspect-video w-full max-w-[1000px] mx-auto rounded-2xl overflow-hidden shadow-2xl ring-1 ring-black/10 bg-black">
+        <iframe 
+          src="https://gamea.azgame.io/tap-drift/" 
+          frameborder="0" 
+          scrolling="no"
+          allowfullscreen
+          class="w-full h-full"
+          title="Tap Drift - Free Online Drifting Game"
+          loading="lazy">
+        </iframe>
+      </div>
+
+      <!-- Game Info -->
+      <div class="mt-12 md:mt-16 text-center md:text-left">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">About Tap Drift</h2>
+        
+        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+          Tap Drift is an ultra-addictive, minimalist racing game that tests your timing and reflexes. 
+          Forget complex controls — here you only need <strong>one tap</strong> to change direction and keep your perfect drift line.
+        </p>
+
+        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+          The longer you hold the perfect drift, the higher your score multiplier climbs. 
+          One small mistake and it's game over. Simple to learn, brutally difficult to master — 
+          that's the magic of Tap Drift.
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-8 mt-12 mb-10">
+          <div class="bg-apple-gray p-6 rounded-2xl">
+            <h3 class="text-xl font-semibold mb-3">One-Tap Controls</h3>
+            <p class="text-gray-600">Just tap to drift. No complicated buttons, perfect for mobile & desktop.</p>
+          </div>
+          <div class="bg-apple-gray p-6 rounded-2xl">
+            <h3 class="text-xl font-semibold mb-3">Endless Challenge</h3>
+            <p class="text-gray-600">Every run is different. Can you beat your personal best?</p>
+          </div>
+          <div class="bg-apple-gray p-6 rounded-2xl">
+            <h3 class="text-xl font-semibold mb-3">Unblocked & Free</h3>
+            <p class="text-gray-600">Play anywhere — school, work, home. No downloads needed.</p>
+          </div>
+        </div>
+
+        <h2 class="text-3xl md:text-4xl font-bold mt-16 mb-6">Why Everyone Loves Tap Drift</h2>
+        
+        <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed">
+          <p>
+            Tap Drift belongs to the ultra-popular genre of <strong>drift games</strong> — 
+            but with a fresh, minimalist twist. Many players call it "<strong>one tap drift</strong>" 
+            or simply "<strong>tap drift</strong>".
+          </p>
+          
+          <p>
+            Compared to other <strong>drift game</strong> titles, Tap Drift stands out with:
+          </p>
+          
+          <ul class="list-disc pl-6 my-6 space-y-3">
+            <li>Extremely clean and focused gameplay</li>
+            <li>Beautiful minimalist visual style</li>
+            <li>Instant play — no loading, no installation</li>
+            <li>Perfect for short high-score chasing sessions</li>
+            <li><strong>Tap Drift unblocked</strong> version works everywhere</li>
+          </ul>
+
+          <p class="mt-8">
+            Whether you're waiting in line, taking a quick break, or trying to beat your friends' scores — 
+            Tap Drift delivers that perfect "one more try" feeling that made games like Flappy Bird legendary.
+          </p>
+        </div>
+
+        <div class="mt-16 text-center">
+          <p class="text-2xl font-medium text-apple-blue mb-6">
+            Ready for the ultimate one-tap challenge?
+          </p>
+          <a href="#game"
+             class="inline-flex items-center justify-center px-10 py-5 text-xl font-semibold text-white bg-apple-blue rounded-full hover:bg-apple-blue-dark transform hover:scale-105 transition-all shadow-xl">
+            Play Tap Drift Now →
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-apple-dark text-gray-300 py-12 mt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-lg">&copy; 2025 TapDrift.io — All Rights Reserved</p>
+      <p class="mt-3 text-sm opacity-70">
+        The ultimate destination for <strong>tap drift</strong>, <strong>drift games</strong> and <strong>one tap drift</strong> action
+      </p>
+    </div>
+  </footer>
+
 </body>
 </html>
